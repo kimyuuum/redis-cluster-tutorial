@@ -121,7 +121,7 @@ $ redis-server
 Redis Cluster는 내부적으로 slot을 가지고 있으며, 특정 알고리즘으로 key값을 변환하여 실제 데이터가 저장될 슬롯을 결정한다. 데이터를 저장하거나 가져올 때, 저장 슬롯을 가진 노드가 아닐 경우, 자동으로 redirect된다. cluster key가 해당 Key가 속한 노드의 서버로 이동시켜 주기 때문에, 데이터가 어느 서버에 저장되었는지 몰라도 된다.
 <br>
 <br>
-###Master-Slave 구조의 Cluster 구성
+### Master-Slave 구조의 Cluster 구성
 
 만약 master로만 구성할 경우, 하나의 노드에 장애가 발생한다면 해당 노드의 데이터 유실이 발생하게 된다. → 이를 방지하기 위해 slave도 같이 구축하는게 좋다.
 
